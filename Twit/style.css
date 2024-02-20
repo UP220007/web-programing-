@@ -1,4 +1,180 @@
-*{
-    background-color: #15202B;
-    color: #ffffff;
+:root{
+    --primary_color_gray: #515B69;
+    --primary_color_gray_50: rgba(110,120,134,0.1);
+    --color_icon_comentario: rgb(29,161,242);
+    --color_icon_comentario-50: rgba(29,161,242,0.4);
+    --color_icon_retwit: rgb(24,176,95);
+    --color_icon_retwit_50: rgba(24,176,95,0.4);
+    --color_icon_like: rgb(224,36,95);
+    --color_icon_like_50: rgba(224,36,95,0.4);
+    --color_icon_compartir: rgb(30,148,221);
+    --color_icon_compartir_50: rgba(30,148,221,0.4);
+}
+
+
+* {
+    background: #15202B;
+    color: white;
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    color: rgb(29, 161, 242);
+    text-decoration: none;
+}
+
+img,svg{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    display: flex;
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-twit{
+    border-radius: 30px;
+    border: solid 0.5p;
+    border-color: transparent transparent var(--primary_color_gray) transparent;
+    width: 650px;
+    height: 400px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 40px;
+}
+
+.container-twit *{
+    background-color: transparent;
+}
+
+.container-twit:hover{
+    background-color: var(--primary_color_gray_50);
+    transition-duration: 0.7s;
+}
+
+.container-body{
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    display: grid;
+    grid-template-columns: 75px 1fr;
+}
+
+.container-avatar img{
+    width: 75%;
+    height: 15%;
+    border-radius: 75%;
+    margin: 10px;
+}
+
+.container-twit-body .header p{
+    padding: 5px 0px;
+}
+
+.container-twit-body .body {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-twit-body .body img{
+    width: 95%;
+    border-radius: 35px;
+    border: solid 0.5 var(--primary_color_gray);
+}
+
+.textGray{
+    color: var(--primary_color_gray);
+}
+
+.container-icons{
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+    display: flex;
+
+    justify-content: space-around;
+}
+
+.icon{
+    width: 35px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon svg, .icon span{
+    color: var(--primary_color_gray);
+    fill: var(--primary_color_gray);
+}
+
+.icon>svg{
+    border-radius: 55%;
+    width: 80%;
+    padding: 5px;
+    margin-right: 2.5px;
+}
+
+.icon span{
+    fount-size: small;
+}
+
+.container-icons .icon:nth-child(1):hover svg,
+.container-icons .icon:nth-child(1):hover span{
+    transition-duration: 400ms;
+}
+
+.container-icons .icon:nth-child(1):hover svg{
+    background-color: var(--color_icon_comentario-50);
+    fill: var(--color_icon_comentario);
+}
+
+.container-icons .icon:nth-child(1):hover span{
+    color: var(--color_icon_comentario);
+}
+
+.container-icons .icon:nth-child(2):hover svg,
+.container-icons .icon:nth-child(2):hover span{
+    transition-duration: 400ms;
+}
+
+.container-icons .icon:nth-child(2):hover svg{
+    background-color: var(--color_icon_retwit_50);
+    fill: var(--color_icon_retwit);
+}
+
+.container-icons .icon:nth-child(2):hover span{
+    color: var(--color_icon_retwit);
+}
+
+.container-icons .icon:nth-child(3):hover svg,
+.container-icons .icon:nth-child(3):hover span{
+    transition-duration: 400ms;
+}
+
+.container-icons .icon:nth-child(3):hover svg{
+    background-color: var(--color_icon_like_50);
+    fill: var(--color_icon_like);
+}
+
+.container-icons .icon:nth-child(3):hover span{
+    color: var(--color_icon_like);
+}
+
+.container-icons .icon:nth-child(4):hover svg{
+    transition-duration: 400ms;
+    background-color: var(--color_icon_compartir_50);
+    fill: var(--color_icon_compartir);
 }
