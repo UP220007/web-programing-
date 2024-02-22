@@ -128,7 +128,7 @@ body{
 }
 
 .icon span{
-    fount-size: small;
+    font-size: small;
 }
 
 .container-icons .icon:nth-child(1):hover svg,
